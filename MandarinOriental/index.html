@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
+    <title>index of Mandarin-Oriental-Taipei</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* body{
+            overflow-x: hidden;
+        } */
+        .navigation{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+            background-color: #242021;
+            padding: .33rem 0;
+            list-style: none;
+        }
+        div.left {
+            display: flex;
+            width: 300px;
+            margin-left: 1rem;
+            
+            
+        }
+        div.right {
+            display: flex;
+            width: 300px;
+            justify-content: flex-end;
+            margin-right: 1rem;
+            
+        }
+        
+        li.fans_of_mo{
+            margin-left: 4rem;
+        }
+        div.left>li a,
+        div.right>li a{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: .8125rem;
+            line-height: 1.6;
+            text-decoration: none;
+            color:#ceb780;
+
+        }
+        div.left>li a:hover,
+        div.right>li a:hover{
+            color:white;
+        }
+        
+        .index::before{
+            content: "/";
+            color:#ceb780;
+            margin: 0 0.5rem 0 0.7rem;
+        }
+        .nav_bar{
+            width: 100%;
+            height: 60px;
+            background-color: #413838;
+            display: flex;
+        }
+        div.menu .fas.fa-bars {
+            color: white;
+            font-size: 2rem;
+            line-height: calc(60px);
+            padding: 0 1.5rem; 
+        }
+        div.menu .fas.fa-bars:hover {
+            color: rgb(172, 169, 169);
+        }
+        div.index2{
+            width: 5.8rem;
+            border-right:2px solid gray ;
+            border-left:2px solid gray ;
+            margin-right: 0.5rem;
+        }
+        div.index2 img{
+            margin: 3.5px 12px;
+        }
+        div.tool_bar{
+            flex-grow: 1;
+        }
+        div.tool_bar ul{
+            list-style: none;
+            display: flex;
+            
+        }
+        .detail_bar li>a{
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: white;
+            line-height: 60px;
+            border-right: 1px solid gray;
+            padding: 0 1.8rem 0 1.5rem;
+        }
+        .detail_bar li:nth-child(6)>a{
+            border-right: none;
+        }
+        .detail_bar li>a:hover{
+            color: #ceb780;
+        }
+        div.reservation{
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            background-color: #464102;
+            line-height: 60px;
+            padding: 0 2.5rem;
+            
+        }
+        div.reservation:hover{
+            background-color: #8d8406;
+        }
+        a.resv{
+            text-decoration: none;
+        }
+        .white_logo{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 150px;
+            left: calc(50% - 100px);
+        }
+        .play_icon{
+            width: 50px;
+            height: 50px;
+            color: white;
+            position: absolute;
+            top: 560px;
+            right: 10px;
+            /* background-color: green; */
+        }
+        .far.fa-pause-circle{
+            font-size: 32px;
+        }
+        section.content_area{
+            padding:8.75rem 0 0 0;
+        }
+        
+        div.wrap_information{
+            padding: 0 3.75rem;
+            display: flex;
+        }
+        div.lobby_pic{
+            width: 33%;
+        }
+        .lobby_pic img{
+            width: 100%;
+            max-width: 505px;
+            height: auto;
+        }
+        div.info{
+            width: 67%;
+            padding-left: 7.5rem;
+        }
+        .info h2{
+            font-weight: 300;
+        }
+        .info h1{
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;;
+            line-height: 5.5rem;
+            font-weight: 500;
+        }
+        .info table{
+            width: 100%;
+            margin-top: 2rem ;
+            border-collapse: collapse;
+        }
+        .info table td{
+            height: 2.8rem;
+            border: 1px solid rgba(177, 173, 173, 0.664);
+            font-size: .8rem;
+            color: #8E6919;
+        }
+        .info table td>i{
+            margin-left: 1rem;
+            margin-right: 1rem;
+            color: rgb(73, 72, 72);
+        }
+        .info table tr:nth-child(even){
+            background-color: rgba(194, 190, 190, 0.144);
+        }
+        /* 公告的部分 */
+        div.bulletin{
+            width: 60%;
+            padding: 0 3.75rem;
+            margin-top: 3rem;
+            margin-left: 3.75rem;
+            margin-bottom: 8rem;
+            color: rgb(110, 109, 109);
+        }
+        .bulletin h2{
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            position: relative;
+            font-size: 1.5rem;
+        }
+        .bulletin h2::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -3.75rem;
+            width: 40px;
+            height: 1px;
+            background-color: grey;
+        }
+        .bulletin p{
+            font-size: .9rem;
+        }
+        .bulletin>strong{
+            margin-left: -3.75rem;
+        }
+        /* 公告部分 */
+        .wrap_room_info>.header{
+            display: flex;
+            margin-bottom: 2rem;
+            padding: 3.75rem 0 0.5rem 0;
+        }
+        .banner{
+            width: 60%;
+            padding-left: 10rem;
+        }
+        .banner p{
+            font-size: 1.5rem;
+        }
+        .banner h1{
+            font-size: 3.5rem;
+        }
+        .choose{
+            width: 40%;
+            padding-top: 50px;
+        }
+        .choose ul {
+            display: flex;
+            align-items:flex-end;
+            list-style: none;
+        }
+        .choose ul>li {
+            margin-right: 1rem;
+        }
+        .wrap_room_info>.body{
+            display: flex;
+        }
+        .body .room_pic{
+            width: 50%;
+        }
+        .room_pic img{
+            width: 100%;
+            height: auto;
+        }
+        .body .room_card_area{
+            width: 50%;
+        }
+        .room_card{
+            position: relative;
+            width: 450px;
+            height: 480px;
+            border: 1px solid gray;
+            left: -50px;
+            top: -40px;
+            padding-left: 8rem;
+            padding-top: 5rem;
+            padding-right: 4rem;
+            line-height: 1.5rem;
+            color: gray;
+        }
+        .room_card h1{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: rgb(61, 58, 58);
+        }
+        .room_card a>div{
+            width: 100px;
+            padding: 1rem 0.5rem;
+            border: 1px solid gray;
+            text-align: center;
+            margin-right: -5px;
+        }
+        .room_card a{
+            
+            text-decoration: none;
+            color: #8E6919;
+        }
+        div.wrap_sharing{
+            width: 100%;
+            padding: 1.5rem 3rem;
+            position: relative;
+        }
+        .hashtag_text{
+            width: 50%;
+            padding-left: 3rem;
+        }
+        .hashtag_text>h3{
+            margin-top: 5rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-size: 30px;
+        }
+        .hashtag_text>h1{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-size: 48px;
+            padding: 1rem 0;
+        }
+        .wrap_sharing a{
+            color: #8E6919;
+            text-decoration: none;
+            position: absolute;
+            bottom: 3.5rem;
+            right: 6rem;
+        }
+        .wrap_sharing a:hover{
+            color: #3b372d;
+            text-decoration-line: underline;
+        }
+        div.pic{
+            width: 100%;
+            height: auto;
+            padding: 1.5rem 3rem;
+            position: relative;
+        }
+        ul.carousel{
+            display: flex;
+            justify-content: center;
+        }
+        .pic>ul li{
+            width: 32%;
+            padding: 0 1.5rem;
+            list-style: none;
+        }
+        .carousel>li img{
+            width: 100%;
+            height: 326px;
+        }
+        div.left_arrow_area{
+            position: absolute;
+            top: 1.5rem;
+            left:-0.5rem;
+            width: 100px;
+            height: 326px;
+            cursor: pointer;
+        }
+        .left_arrow{
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: calc(50% - 1rem);
+            top: calc(50% - 1rem);
+        }
+        div.right_arrow_area{
+            position: absolute;
+            right: -0.5rem;
+            top: 1.5rem;
+            width: 100px;
+            height: 326px;
+            cursor: pointer;
+        }
+        .right_arrow{
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: calc(50% - 1rem);
+            top: calc(50% - 1rem) ;
+        }
+        .pic i{
+            font-size: 2rem;
+        }
+        div.sales_text{
+            padding: 5.5rem 0;
+        }
+        .sales_text p{
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        .sales_text h1{
+            font-size: 4rem;
+            font-weight: 300;
+            text-align: center;
+            position: relative;
+        }
+        .sales_text h1::before{
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 150px;
+            height: 1px;
+            background-color: rgba(128, 128, 128, 0.774);
+        }
+        .sales_text h1::after{
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 150px;
+            height: 1px;
+            background-color: rgba(128, 128, 128, 0.774);
+        }
+        div.sales_cards{
+            padding: 3rem 10rem;
+            border-bottom: 4px solid #8d8406;
+        }
+        .sales_cards ul{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .sales_cards ul li{
+            list-style: none;
+            padding: 0 0.75rem;
+        }
+        li.left{
+            width: 33%;
+            
+        }
+        li.center{
+            flex-grow: 1;
+            
+        }
+        li.right{
+            width: 33%;
+            
+        }
+        /* 左邊卡片 */
+        .left_card{
+            text-align: center;
+        }
+        .left_card h3{
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 1rem 0 0.5rem 0;
+            color: rgb(32, 32, 32);;
+        }
+        .left_card p{
+            padding-bottom: 1.5rem;
+            color: gray;
+        }
+        .left_card a{
+            color: #8d8406;
+            text-underline-offset: 2px;
+        }
+        .left_card a:hover{
+            color: rgb(134, 128, 128);
+        }
+        .left_card img{
+            width: 100%;
+            height: auto;
+        }
+        /* 中間卡片 */
+        .center_card img{
+            position: absolute;
+            left: calc(50% - 55px);
+            top: 5rem;
+        }
+        .center_card{
+            position: relative;
+            height: 500px;
+            border: 1px solid rgba(136, 131, 131, 0.267);
+            transform: translateY(-6rem);
+        }
+        .center_card p{
+            position: absolute;
+            top: 45%;
+            width: 100%;
+            padding: 0 5rem;
+            text-align: center;
+            line-height: 2rem;
+            color: rgb(83, 72, 47);
+        }
+        .center_card button{
+            width: 19.5rem;
+            position: absolute;
+            left: calc(50% - 9.5rem);
+            bottom: -1.6rem;
+            font-size: 1.5rem;
+            background-color: #8d8406;
+            color: white;
+            border: none;
+            padding: 0.85rem 0;
+            cursor: pointer;
+        }
+        .center_card button:hover{
+            background: #504c10;
+        }
+        /* 右邊卡片 */
+        .right_card{
+            text-align: center;
+        }
+        .right_card h3{
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 1rem 0 0.5rem 0;
+            color: rgb(32, 32, 32);
+        }
+        .right_card p{
+            padding-bottom: 1.5rem;
+            color: gray;
+        }
+        .right_card a{
+            color: #8d8406;
+            text-underline-offset: 2px;
+        }
+        .right_card a:hover{
+            color: rgb(134, 128, 128);
+        }
+        .right_card img{
+            width: 100%;
+            height: auto;
+        }
+        .wrap_footer{
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 400px;
+            background: #413838;
+        }
+        /* 最左邊的部分 */
+        div.hotel_info{
+            width: 300px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 6rem; 
+        }
+        /* 用flex 做水平置中 */
+        /* 全部的部分往右移動 */
+        /* logo本身的上下由margin來動 */
+        .hotel_info .footer_logo{
+            width: 175px;
+            margin-top: 3rem; 
+            margin-bottom: 1rem;  
+        }
+        .hotel_info img{
+            width: 175px;
+            height: auto;
+        }
+        .hotel_info h3{
+            font-weight: 400;
+            font-style: italic;
+            color: white;
+            text-align: center;
+        }
+        .hotel_info p{
+            font-size: 0.3rem;
+            color: white;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+        div.phone_email{
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            font-size: 0.3rem;
+        }
+        .cellphone{
+            border-right: 1px solid white;
+            padding-right: 5px;
+        }
+        .email{
+            padding-left: 5px;
+        }
+        .cellphone>a{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+        }
+        .email>a{
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: -1px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+        }
+        
+        /* 中間的聯絡方式部分 */
+        div.contact{
+            width: 30%;
+            color: white;
+            padding-top: 4.5rem;
+        }
+        .contact p{
+            padding-left: 8rem;
+            margin-bottom: 2rem;
+        }
+        .contact .icon{
+            font-size: 1.5rem;
+            margin-left: 8rem;
+        }
+        div.icon i{
+            margin-right: 1.5rem;
+        }
+        /* 最右邊的8個超連結 */
+        div.list{
+            margin-top: 4rem;
+            width: 600px;
+            height: 200px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: end;
+            flex-wrap: wrap;
+        }
+        .list div{
+            color: white;
+            font-size: 0.9rem;
+            width: 34%;
+            
+            border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+            padding-top: 1rem;
+            margin-right: 2rem ;
+            
+        }
+        /* 著作權商標 */
+        .copy_right{
+            width: 800px;
+            height: 50px;
+            position: absolute;
+            left: calc(50% - 400px);
+            top: 80%;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .copy_right p{
+            padding-right: 0.5rem;
+        }
+        .copy_right a{
+            font-style: italic;
+            text-decoration: none;
+            color: white;
+            padding-right: 0.5rem;
+        }
+        .copy_right a:hover{
+            color: gray;
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="first-navigation"> 
+        <ul class="navigation">
+            <div class="left">
+                <li class="global">
+                    <a href="https://www.mandarinoriental.com.hk/">全球首頁</a>
+                </li>
+                <li class="index">
+                    <a href="https://www.mandarinoriental.com.hk/taipei/songshan/luxury-hotel">台北</a>
+                </li>
+            </div>
+            <div class="right">
+                <li class="language">
+                    <a href="#">
+                        <i class="fas fa-globe"></i>
+                        語言
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li class="fans_of_mo">
+                    <a href="https://www.mandarinoriental.com.hk/fans-of-mo/login">
+                        FANS OF M.O.
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <nav class="secondary-navigation">  
+        <ul class="nav_bar">
+            <div class="menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="index2">
+                <a href="https://www.mandarinoriental.com.hk/taipei/songshan/luxury-hotel">
+                    <img src="./img/logo.jpg" alt="" height="50" width="65">
+                </a>
+            </div>
+            <div class="tool_bar">
+                <ul class="detail_bar">
+                    <li>
+                        <a href="#">概覽</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mandarinoriental.com.hk/taipei/songshan/luxury-hotel/accommodations">客房和套房</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mandarinoriental.com.hk/taipei/songshan/luxury-hotel/offers">禮遇</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mandarinoriental.com.hk/taipei/songshan/fine-dining">餐飲服務</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mandarinoriental.com.hk/taipei/songshan/luxury-spa">芳療和健身</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mandarinoriental.com.hk/taipei/songshan/luxury-hotel/venues">會議和活動</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="https://www.mandarinoriental.com.hk/reservations?hotel=59555&language=zh-TW&rates=true" class="resv"> 
+                <div class="reservation">立即預訂</div>     
+            </a>
+        </ul>
+    </nav>
+    <!-- 影片的部分 -->
+    <video id="masthead-video" poster="https://photos.mandarinoriental.com/is/image/MandarinOriental/taipei-hotel-video-ff-desktop" loop="" autoplay="" playsinline="" muted="" width="100%">
+        <source src="https://photos.mandarinoriental.com/is/content/MandarinOriental/MOTPE - Taipei/Videos/taipei-hotel-video-2021-desktop.mp4" type="video/mp4">
+    </video>
+    <div class="white_logo">
+        <img src="./img/taipei-hotel-logo-SVG.svg" alt="">
+    </div>
+    <div class="play_icon"><i class="far fa-pause-circle"></i></div>
+    <!-- 影片的部分 -->
+    <section class="content_area"> 
+        <div class="wrap_information">
+            <div class="lobby_pic">
+                <img src="./img/taipei-hotel-lobby-04.jpg" alt="">
+            </div>
+            <div class="info">
+                <h2>讓自己沉醉於</h2>
+                <h1>台北</h1>
+                <p>台北文華東方酒店是一間超水準的五星級豪華酒店，坐落於市中心繁華地段，讓您在城市綠洲的環境中盡情放鬆。酒店擁有多間精緻優雅的餐廳，並設有全台灣最大型的酒店水療中心，必定令每位來賓樂而忘返。</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <i class="fas fa-map-marker-alt"></i>
+                                台灣 台北市 敦化北路158號
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-envelope"></i>
+                                MOTPE-SALES@MOHG.COM
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-phone-alt"></i>
+                                +886 2 275 6888
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-download"></i>
+                                酒店介紹
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+        <div class="bulletin">
+            <h2>公告</h2>
+            <p>有鑒於新型冠狀病毒肺炎的爆發，如賓客（或其任何同行和受邀賓客）出現體溫超過 37.3°C (99.1°F) 的紀錄，入住前過去21天内有任何前往受影響地區的旅遊記錄或有任何新型冠狀病毒相關的症狀病徵，亦或根據台北文華東方酒店（簡稱“酒店”)的判斷，會對其他賓客和員工帶來風險，酒店保留出於任何原因而酌情取消或修改賓客的預訂之權利。<br><br>
+            為因應台灣中央流行疫情指揮中心相關措施以及酒店集團所持續實施至高的健康和安全標準，所有入住賓客及同行者皆需於辦理入住時填寫健康申報表。同時，台北文華東方酒店目前並不具備可管理或監測自我隔離及檢疫之相關設施，我們將暫緩接待需要自我隔離或在自主健康管理期間檢疫的賓客入住。同時，賓客如需使用芳療中心三溫暖設施，須出示完整接種新冠疫苗紀錄，如未出示之賓客，台北文華東方酒店有權利拒絕賓客入內。不便之處，懇請見諒。<br><br>
+            維護賓客和員工的健康和安全一直是文華東方酒店最為重視的要務，我們隨時密切關注疫情的發展，並遵循實施世界衛生組織以及本地衛生單位和政府機關的相關指令。更多詳情請瀏覽 衛生福利部疾病管制署。<br><br><br>
+            有關住宿、餐飲及芳療優惠券之效期展延及退券説明請點擊此處<br><br><br><br>
+            </p>
+            <strong style="font-size: 0.8rem;">
+            點擊此連結，您將被導向第三方網站，且適用於第三方網站的隱私權保護政策及條款規定。
+            </strong>
+        </div>
+        <div class="wrap_room_info">
+            <div class="header">
+                <div class="banner">
+                    <p>現代奢華與東方古典風情</p>
+                    <h1>客房和套房</h1>
+                </div>
+                <div class="choose">
+                    <ul>
+                        <li>全部</li>
+                        <li>套房</li>
+                        <li>客房</li>
+                        <li>行政樓層</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body">
+                <div class="room_pic">
+                    <img src="./img/taipei-suite-mandarin1.jpg" alt="">
+                </div>
+                <div class="room_card_area">
+                    <div class="room_card">
+                        <h1>文華套房</h1>
+                        <p>我想要一間設有客廳、飯廳及娛樂休閒室的套房。</p>
+                        <br>
+                        <p>此豪華套房設有寬敞的臥室，內配空間充裕的穿堂式衣櫃。私人娛樂套房旁邊便是獨立客廳和飯廳。雲石浴室設有特大浴缸及圓形按摩淋浴間。</p>
+                        <a href="#"><div>查看詳情</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap_sharing">
+            <div class="hashtag_text">
+                <h3>Are you a fan?</h3>
+                <h1>#mandarinoriental</h1>
+                <p>
+                    <i class="fas fa-camera-retro"></i> 
+                    Discover our destinations through the eyes of our guests. Share your experience with #ImAFan and mention @mo_hotels for a chance to be featured.
+                </p>
+            </div>
+            <a class="linking" href="#">VIEW GUEST GALLERY</a>
+        </div>
+        <div class="pic">
+            <div class="left_arrow_area">
+                <div class="left_arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                </div>
+            <ul class="carousel">
+                <li><img src="./img/normal (1).jpg" alt=""></li>
+                <li><img src="./img/normal (2).jpg" alt=""></li>
+                <li><img src="./img/normal (3).jpg" alt=""></li>
+            </ul>
+            <div class="right_arrow_area">
+                <div class="right_arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="sales_text">
+            <p>人生充滿著各種</p>
+            <h1>誘惑</h1>
+        </div>
+        <div class="sales_cards">
+            <ul>
+                <li class="left">
+                    <div class="left_card">
+                        <div class="img">
+                            <img src="./img/taipei-luxury-spa-pool.jpg" alt="">
+                        </div>
+                        <h3>文華東方逸居之旅</h3>
+                        <p>房價格由 TWD 10,500</p>
+                        <a href="#">了解更多</a>
+                    </div>
+                </li>
+                <li class="center">
+                    <div class="center_card">
+                        <div class="img">
+                            <img src="./img/global-fans-of-mo-logo-black.png" alt="">
+                        </div>
+                        <p>讓您的住宿體驗更臻完美。<br>
+                            只要成為 Fans of M.O.，每次入住全球任何一間文華東方酒店，均可享受免費無線寬頻網絡、會員限定禮遇，以及迎賓禮物乙份。
+                        </p>
+                        <button>加入尚扇薈</button>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="right_card">
+                        <div class="img">
+                            <img src="./img/taipei-room-deluxe-twin.jpg" alt="">
+                        </div>
+                        <h3>多一晚享受</h3>
+                        <p>房價格由 TWD 8,333</p>
+                        <a href="#">了解更多</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section> 
+    <footer>
+        <div class="wrap_footer">
+            <div class="hotel_info">
+                <div class="footer_logo">
+                    <img src="./img/taipei-hotel-logo-SVG.png" alt="">
+                </div>
+                <h3>台北文華東方酒店</h3>
+                <p>台灣 台北市 敦化北路158號</p>
+                <div class="phone_email">
+                    <div class="cellphone">
+                        <a href="#">+886 2 2715 6888</a>
+                    </div>
+                    <div class="email">
+                        <a href="#">MOTPE-SALES@MOHG.COM</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="contact">
+                <p>與我們聯絡</p> 
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="list">
+                <div>聯絡我們</div>
+                <div>關於我們</div>
+                <div>我的檔案</div>
+                <div>傳媒中心</div>
+                <div>最優惠價格承諾</div>
+                <div>就業機會</div>
+                <div>酒店式住宅</div>
+                <div>禮品卡</div>
+            </div>
+            <div class="copy_right">
+                <p>2022 © 文華東方酒店集團有限公司</p>
+                <a href="#">私隱條款</a>
+                <a href="#">網站地圖</a>
+                <a href="#">法律聲明</a>
+                <a href="#">廣告及Cookie政策</a>
+            </div>
+        </div>
+        
+    </footer> 
+</body>
+</html>
