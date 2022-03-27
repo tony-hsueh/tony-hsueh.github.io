@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">Crossword Puzzle</div>
+    <div class="wrap">
+        <div class="box ans" style="left: 0;top: 120px" data-answer="p"></div>
+        <div class="box" style="left: 0;top: 161px">i</div>
+        <div class="box" style="left: 0;top: 202px">g</div>
+        <div class="box" style="left: 41px;top: 202px">i</div>
+        <div class="box" style="left: 82px;top: 202px">r</div>
+        <div class="box ans" style="left: 123px;top: 202px" data-answer="a"></div>
+        <div class="box" style="left: 164px;top: 202px">f</div>
+        <div class="box" style="left: 205px;top: 202px">f</div>
+        <div class="box" style="left: 246px;top: 202px">e</div>
+
+        <div class="box" style="left: 123px;top: 38px">l</div>
+        <div class="box" style="left: 123px;top: 79px">e</div>
+        <div class="box" style="left: 123px;top: 120px">o</div>
+        <div class="box" style="left: 123px;top: 161px">p</div>
+        <div class="box" style="left: 123px;top: 243px">r</div>
+        <div class="box" style="left: 123px;top: 284px">d</div>
+
+        <div class="box" style="left: 164px;top: 284px">o</div>
+        <div class="box" style="left: 205px;top: 284px">l</div>
+        <div class="box" style="left: 246px;top: 284px">p</div>
+        <div class="box ans" style="left: 287px;top: 284px" data-answer="h"></div>
+        <div class="box" style="left: 328px;top: 284px">i</div>
+        <div class="box" style="left: 369px;top: 284px">n</div>
+
+        <div class="box" style="left: 287px;top: 325px">e</div>
+        <div class="box" style="left: 287px;top: 366px">n</div>
+
+        <div class="box" style="left: 280px;top: 41px">z</div>
+        <div class="box" style="left: 321px;top: 41px">e</div>
+        <div class="box" style="left: 362px;top: 41px">b</div>
+        <div class="box ans" style="left: 403px;top: 41px" data-answer="r"></div>
+        <div class="box" style="left: 444px;top: 41px">a</div>
+
+        <div class="box" style="left: 403px;top: 0">f</div>
+        <div class="box" style="left: 403px;top: 82px">o</div>
+        <div class="box" style="left: 403px;top: 123px">g</div>
+    </div>
+    
+    <div class="choose">
+    
+        <div class="q" style="top: 280px; right: 28%;" draggable="true">r</div>
+        <div class="q" style="top: 380px;right: 30%;"draggable="true">p</div>
+        <div class="q" style="top: 250px; right: 20%;" draggable="true">h</div>
+        <div class="q" style="top: 300px; right: 15%;" draggable="true">b</div>
+        <div class="q" style="top: 550px; right: 25%;" draggable="true">m</div>
+        <div class="q" style="top: 400px;right: 55%;" draggable="true">a</div>
+        <div class="q" style="top: 100px;right: 55%;" draggable="true">o</div>
+        <div class="q" style="top: 150px;right: 65%;" draggable="true">k</div>
+    </div>  
+    <button class="hint">取<br>得<br>提<br>示</button>
+    <div class="table_hint">
+        <ul>
+            <li>喜歡在泥地中滾來滾去</li>
+            <div style="position: absolute; top: 52px; left: 30px; color: rgb(155, 35, 35);">(有出演粉紅X小妹)</div>
+            <li>貓的大隻版，有黑色斑點</li>
+            <li>兩隻腳，有翅膀但不會飛</li>
+            <li>小時候的名字是蝌蚪</li>
+        </ul>
+    </div>
+    <script src="./drag-drop.js"></script>
+</body>
+</html>
