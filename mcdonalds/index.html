@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mcdonalds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> 
+    <style>
+        nav {
+            box-shadow: 0px 2px 3px 1px rgba(151, 150, 150, 0.274);
+        }
+        .logo img {
+            width:4rem;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .fas.fa-map-marker-alt{
+            color: red;
+        }
+        .navbar-nav li{
+            padding-right: 1.5rem;
+            font-size: 1.2rem;
+        }
+        .local {
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 0 3px 2px rgba(129, 126, 126, 0.616);
+        }
+        .image-wrap {
+            /* min-width: 320px; */
+            max-width:800px;
+        }
+        .image-wrap img{
+            width: 100%;
+            height: auto;
+        }
+        .banner {
+            background-color: black;
+            position: relative;
+        }
+        /* 以下是卡片 */
+        .card {
+            width: 70%;
+            margin:0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.575);
+        }
+        .card a{
+            padding:.7rem 2.4rem;  
+        }
+        .card {
+            padding-bottom: 2rem;
+        }
+        .card-body {
+            flex-grow:1;
+
+        }
+        /* 以下是icons for linking */
+        .outline {
+            text-align: center;
+            width: 35px;
+            height: 35px;
+            margin-right: 20px;
+            border: 1px solid rgba(143, 142, 142, 0.671);
+            border-radius: 50%;
+        }
+        .fa-facebook-f{
+            line-height: 35px;
+            font-size: 14px;
+        }
+        .fa-youtube{
+           font-size: 13px; 
+           line-height: 35px;
+        }
+        .fa-instagram{
+            line-height: 32px;
+        }
+        
+        h6 {
+            font-size: 12px;
+        }
+         .copyright{
+             font-size: 12px;
+         } 
+         .download {
+             margin-right: 15px;
+            
+         }
+         /* 以下是footer選單 */
+        .fa-plus{
+            transition: .5s;
+        }
+        .fa-plus:hover{
+            transform: rotate(180deg);
+        }
+        li{
+            list-style: none;
+            
+        }
+        a.f_nav{
+            color: rgb(59, 59, 59);
+            font-size: 14px;
+        }
+        .i_link {
+            color: rgb(36, 35, 35);
+        }
+        .fb_bg:hover {
+            background-color:rgb(66, 128, 199) ;
+        }
+        .fb_bg:hover .i_link{
+            color: white;
+        }
+        .yt_bg:hover {
+            background-color:rgb(218, 40, 34) ;
+        }
+        .yt_bg:hover .i_link{
+            color: white;
+        }
+        .ig_bg:hover {
+            background-color:rgb(219, 74, 255) ;
+        }
+        .ig_bg:hover .i_link{
+            color: white;
+        }
+        
+        @media screen and (min-width:768px) {
+            .card {
+                width: 100%;
+            }
+            .local {
+                width: 30%;
+                min-width: 18rem;
+                position: absolute;
+                left: 50px;
+                bottom: 40px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center w-100">
+                <div class="logo col-2">
+                    <a class="navbar-brand" href="https://www.mcdonalds.com/tw/zh-tw.html">
+                        <img src="./mc_images/arches-logo_108x108.jpg" alt="">
+                    </a>
+                </div>
+                <!-- 以上是logo -->
+                <!-- 以下是手機顯示的bar -->
+                <div class="d-block mr-auto d-md-none">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- <div class="nav-computer d-none d-md-block">
+                    <div class="description">
+                        <ul>
+                            <li><a href="">別具滋味</a></li>
+                            <li><a href="">企業永續</a></li>
+                            <li><a href="">數位便利</a></li>
+                            <li><a href="">現正推出</a></li>
+                            <li><a href="">尋找餐廳</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- 以下是電腦會出現的上下div -->
+                <div class="nav-right d-none d-md-block col-10 ">
+                   <div class="icon-area d-flex justify-content-end">
+                        <div class="search d-flex px-3">
+                            <i class="fas fa-search px-1"></i>
+                            <p>站內搜尋</p>
+                        </div>
+                        <div class="map d-flex">
+                            <i class="fas fa-map-marker-alt px-1"></i>
+                            <p>我附近的麥當勞</p>
+                        </div>
+                   </div> 
+                   <div class="detail-area ">
+                       <ul class="navbar-nav d-flex flex-row ">
+                         <li class="nav-item dropdown ">
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               別具滋味
+                             </a>
+                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="#">Action</a>
+                               <a class="dropdown-item" href="#">Another action</a>
+                               <div class="dropdown-divider"></div>
+                               <a class="dropdown-item" href="#">Something else here</a>
+                             </div>
+                           </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#">企業永續</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">數位便利</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">現正推出</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">尋找餐廳</a>
+                         </li>
+                       </ul>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--以下是banner的部分  -->
+<div class="container mb-5"> 
+    <div class="banner">
+        <div class="image-wrap mx-auto mr-md-0 ml-md-auto">
+            <img src="./mc_images/ST-Carousel-pc_767x340.png" alt="">
+        </div>
+
+        <div class="local px-2 py-3 ">
+            <h3>極選海陸饗宴美味開席</h3>
+            <p class="pb-3">炸蝦天婦羅首度奢華入堡，鮮嫩酥脆搭配厚實多汁安格斯黑牛與酸甜青檸蒔蘿醬，海陸饗宴帶來極致滿足</p>
+            <button class="btn btn-warning ">了解美味關鍵</button>
+        </div>
+    </div>  
+</div>
+<!-- 以下是卡片的部分 -->
+<div class="container mb-4">
+    <div class="row justify-content-between ">
+        <div class="col-12 col-md-6 my-2">
+            <div class="card new">
+                <img src="./mc_images/what-hot-MB.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-center ">
+                  <h5 class="card-title">現正推出</h5>
+                  <p class="card-text text-muted">想了解麥當勞有哪些最新活動嗎？你不想錯過的美食、最即時的優惠內容... 馬上探索、馬上行動！</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 my-2">
+            <div class="card deliever">
+                <img src="./mc_images/mcd-home-mds-mb0811.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title"><strong>24hr</strong>歡樂送</h5>
+                  <p class="card-text text-muted">不想出門？還是不方便出門？麥當勞歡樂送APP提供24小時點餐服務，讓你想吃就點，歡樂不間斷</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 my-2">
+            <div class="card cafe">
+                <img src="./mc_images/0-1-McCafe-banner-328x184-mo.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-center ">
+                  <h5 class="card-title">一杯<strong>McCafé</strong>一段對話</h5>
+                  <p class="card-text text-muted">一杯咖啡創造一段時光，在這段時間，您可以開啟一段對話，享受香醇，興許會是一段故事的新開始</p>
+                  <a href="#" class="btn btn-warning">開啟咖啡時光</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 my-2">
+            <div class="card">
+                <img src="./mc_images/親子時光KV_MB_328x184.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title">親子時光</h5>
+                  <p class="card-text text-muted">世界上還有什麼比和寶貝在一起更重要的呢？找時間帶他來麥當勞一起吃、一起玩，為寶貝上人生的第一堂課：快樂</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 my-2">
+            <div class="card">
+                <img src="./mc_images/0-good-food-parents-child-328x184-mo.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title">安心品質</h5>
+                  <p class="card-text text-muted">從食材挑選到衛生管理，從大事項到小細節，你的每一口都有我們最嚴格的把關認證，只為了讓你安心享受。</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 my-2">
+            <div class="card">
+                <img src="./mc_images/Home_Banner_Digital_MB328x184.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title">數位便利</h5>
+                  <p class="card-text text-muted">總是為你想得更多，現在就利用多樣且便利的數位服務，來麥當勞找尋美味與樂趣吧！</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+<!-- 以下是footer下拉選單 -->
+<div class="container mb-4">
+    <div class="row">
+        <div class="d-none d-md-block col-3 pl-0">
+            <ul class="pl-3">
+                <li class="pb-2"><a class="f_nav" href="#">關於我們</a></li>
+                <li><a class="f_nav" href="#">品牌故事與承諾</a></li>
+                <li><a class="f_nav" href="#">新聞室</a></li>
+                <li><a class="f_nav" href="#">麥當勞季報</a></li>
+            </ul>
+        </div>
+        <div class="d-none d-md-block col-3 ">
+            <ul>
+                <li class="pb-2"><a class="f_nav" href="#">成為麥胞</a></li>
+                <li><a class="f_nav" href="#">職涯發展</a></li>
+                <li><a class="f_nav" href="#">加入我們</a></li>
+                
+            </ul>
+        </div>
+        <div class="d-none d-md-block col-3">
+            <ul>
+                <li class="pb-2"><a class="f_nav" href="#">聯絡我們</a></li>
+                <li><a class="f_nav" href="#">常見問題</a></li>
+            </ul>
+        </div>
+        <div class="d-none d-md-block col-3">
+            <ul class="pl-0">
+                <li><a class="f_nav" href="#">麥當勞叔叔之家慈善基金會</a></li>
+            </ul>
+        </div>
+        <div class="col-12 mb-3 d-md-none">
+            <div class="mytoggler d-flex justify-content-between">
+                <div class="about_us">關於我們</div>
+                <div class="small_icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3 d-md-none">
+            <div class="mytoggler d-flex justify-content-between">
+                <div class="about_us">成為麥胞</div>
+                <div class="small_icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3 d-md-none">
+            <div class="mytoggler d-flex justify-content-between">
+                <div class="about_us">聯絡我們</div>
+                <div class="small_icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3 d-md-none">
+            <div class="mytoggler d-flex justify-content-between">
+                <div class="about_us">麥當勞叔叔之家慈善基金會</div>
+                <div class="small_icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 以下是facbook and youtube之類的按鈕 -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start mb-4 pt-md-1">
+            <div class="profile_link d-flex ">
+
+                <div class="outline fb_bg">
+                   <a class="i_link" href="#"><i class="fab fa-facebook-f"></i></a> </div>
+                <div class="outline yt_bg">
+                    <a class="i_link" href="#"><i class="fab fa-youtube"></i></a></div>
+                    <a class="i_link" href="#"><div class="outline ig_bg"><i class="fab fa-instagram"></i></a></div>  
+            </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center  justify-content-md-end">
+            <div class="store_link d-flex">
+                <div class="download">
+                    <img src="./mc_images/app_store_badge.png" alt="">
+                </div>
+                <div class="download mr-md-0">
+                    <img src="./mc_images/google_play_badge.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 以下是隱私權的部分 -->
+<footer class="mt-4 mt-md-4 my-4">
+    <div class="container" style="border-top: 1px solid rgba(128, 128, 128, 0.692);">
+      <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="privacy d-block d-md-flex my-3">
+                    <h6 class="text-muted mb-3" style="text-align: center;">網站使用條款</h6>
+                    <h6 class="text-muted ml-md-5" style="text-align: center;">隱私權保護聲明</h6>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="copyright d-flex justify-content-center justify-content-md-end align-items-center mt-md-2">
+                <img src="./mc_images/arches-logo_108x108.jpg" alt="" width="25px;" height="25px;">
+                <small>© 2017 - 2021 McDonald's. All Rights Reserved.</small>
+                </div>
+            </div>
+      </div>
+        
+    </div>
+</footer>  
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
