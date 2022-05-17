@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>      
+    <title>Subway</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="map"><img src="./img/icon_hd_store.png" alt="" class="d-lg-none"></div>
+            <div class="logo"><img src="./img/logo.svg" alt=""></div>
+            <div class="nav_link">
+                <div class="search d-none d-lg-block">門市搜尋</div>
+                <div class="register d-none d-lg-block">加盟申請</div>
+                <div class="line d-none d-lg-block"><img src="./img/line.png" alt=""></div>
+                <div class="lang d-none d-lg-block">EN</div>
+                <div class="country d-none d-lg-block"><i class="fas fa-globe"></i></div>
+                <div class="bar d-block d-lg-none"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="links d-none d-lg-flex">
+            <div>美味點餐</div>
+            <div>如何點餐</div>
+            <div>最新活動</div>
+            <div>關於我們</div>
+            <div>如何點餐</div>
+        </div>
+    </section>
+    <section>
+        <div class="banner">
+            <div class="container-fluid pl-0 pr-0">
+                <img src="./img/bn-md-220331.jpg" alt="" width="100%" class="banner_pic">
+            </div>
+            <div class="dot">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="main_link">
+                <div class="search_store">
+                    <img src="./img/icon_map.png" alt="">
+                    <div class="text">門市搜尋</div>
+                </div>
+                <div class="online_order">
+                    <img src="./img/icon_order1.png" alt="">
+                    <div class="text">線上點餐快取</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-between products">
+                <div class="title">美味餐點</div>
+                <div class="favor d-none d-lg-flex">
+                    <div>特選雞</div>
+                    <div>經典牛/豬</div>
+                    <div>綜合百匯</div>
+                    <div>早餐</div>
+                </div>
+                <select name="favor_type" id="favor_type" class="d-block d-lg-none">
+                    <option value="">特選雞</option>
+                    <option value="">經典牛/豬</option>
+                    <option value="">綜合百匯</option>
+                    <option value="">早餐</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="food_card col-12 col-lg-3">
+                    <div class="food_pic"><img src="./img/fit-TurkeyBreast.jpg" alt=""></div>
+                    <div class="food_name">火烤雞肉</div>
+                    <div class="food_profile">鮮嫩火雞胸肉切片，清爽低負擔，SUBWAY的獨特風味!</div>
+                </div>
+                <div class="food_card col-12 col-lg-3">
+                    <div class="food_pic"><img src="./img/fit-RoastedChickenBreast.jpg" alt=""></div>
+                    <div class="food_name">香烤雞肉</div>
+                    <div class="food_profile">香嫩無骨的香烤雞胸排，烤後香味四溢，令人食指大開，無法抗拒的美味</div>
+                </div>
+                <div class="food_card col-12 col-lg-3">
+                    <div class="food_pic"><img src="./img/premium-ChickenTeriyaki.jpg" alt=""></div>
+                    <div class="food_name">照燒雞肉</div>
+                    <div class="food_profile">這是一款來自亞洲、風靡全球的經典美食，在鮮嫩雞柳條配上完美比例的鮮甜照燒醬，讓人愛不釋手鹹甜滋味</div>
+                </div>
+                <div class="food_card col-12 col-lg-3">
+                    <div class="food_pic"><img src="./img/20190628113800-18922606025cd27a852abe1-p01.jpg" alt=""></div>
+                    <div class="food_name">鮮嫩雞柳</div>
+                    <div class="food_profile">鮮嫩雞柳條搭配你喜愛的醬料和新鮮蔬菜，打造你專屬的最愛口味</div>
+                </div>
+            </div>
+        </div>
+        <div class="bg_pattern">
+            <div class="container pt-5 pl-0 pr-0">
+                <div class="row justify-content-around">
+                    <div class="col-12 col-lg-4 order_method">
+                        <div class="order_method_title">如何點餐</div>
+                        <div class="order_method_link">更多詳情</div>
+                        <div class="order_method_pic d-none d-md-block"><img src="./img/bg-olive.png" alt=""></div>
+                    </div>
+                    <div class="col-12 col-lg-8 company d-block d-md-flex pl-0">
+                        <div class="company_pic"><img src="./img/news_0329.jpg" alt=""></div>
+                        <div class="company_group">
+                            <div class="company_title">Fresh Forward <br/> SUBWAY的全新轉變</div>
+                            <div class="company_link">更多詳情</div>
+                        </div>
+                        <div class="company_pic2 d-none d-lg-block"><img src="./img/bg-cheese.png" alt=""></div>
+                    </div>
+                    <div class="col-12 col-lg-8 special d-block d-lg-flex">
+                        <div class="special_title">超值精選</div>
+                        <div class="group">
+                            <div class="special_content">美味超值絕配~火辣異國風、營養新食尚</div>
+                            <div class="special_link">更多詳情</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 special_offer">
+                        <img src="./img/banner220331.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid links_section">   
+            <div class="third_links_area">
+                <div class="activity_link d-flex">
+                    <div class="link_pic">
+                        <img src="./img/icon04.svg" alt="">
+                    </div>
+                    <div class="link_text">促銷活動</div>
+                </div>
+                <div class="menu_link d-flex">
+                    <div class="link_pic">
+                        <img src="./img/icon03.svg" alt="">
+                    </div>
+                    <div class="link_text">餐廳菜單</div>
+                </div>
+                <div class="location_link d-flex">
+                    <div class="link_pic">
+                        <img src="./img/icon01.svg" alt="">
+                    </div>
+                    <div class="link_text">餐廳據點</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <ul class="company_rule">
+                <li>使用條款</li>
+                <li>隱私權政策</li>
+                <li>經營管理</li>
+                <li>Subway&#174Listens</li>
+                <li>常見問題</li>
+            </ul>
+            <div class="footer_group d-block d-lg-flex">
+                <div class="copyright d-none d-lg-block">
+                    圖片僅供參考，商品以各門市實際供應為準<br/>
+                    Subway&#174 is a Registered Trademark of Subway IP LLC.&#169 2019 Subway IP LLC. All Rights Reserved 
+                </div>
+                <div class="share_links d-flex">
+                    <div class="line_link">
+                        <i class="fab fa-line"></i>
+                    </div>
+                    <div class="facebook_link">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="language_switch">
+                        EN
+                    </div>
+                </div>
+                <div class="copyright d-block d-lg-none">
+                    圖片僅供參考，商品以各門市實際供應為準<br/>
+                    Subway&#174 is a Registered Trademark of Subway IP LLC.&#169 2019 Subway IP LLC. All Rights Reserved 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fast_menu d-none d-md-flex">
+        <div class="menu_pic">
+            <img src="./img/icon_order1.png" alt="">
+        </div>
+        <div class="menu_text">
+            線上點餐<br/>快取
+        </div>
+    </div>
+</body>
+</html>
