@@ -215,12 +215,22 @@
         max-width: 76.875rem;
         position: relative;
         z-index: 5;
+        max-width: 1230px;
+        margin: 50px auto;
+        margin-bottom: 5rem;
+        padding: 15px 15px;
+        @include medium{
+            max-width: 975px;
+        }
+        @include pad {
+            max-width: 750px;
+        }
         @include mobile{
             width: 100%;
+            padding: 0;
         }
         .banner_text1{
             width: 60%;
-            margin-left: 5.5rem;
             @include mobile{
                 width: 100%;
                 margin: 0 auto;

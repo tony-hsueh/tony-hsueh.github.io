@@ -280,17 +280,33 @@
   max-width: 76.875rem;
   position: relative;
   z-index: 5;
+  max-width: 1230px;
+  margin: 50px auto;
+  margin-bottom: 5rem;
+  padding: 15px 15px;
+}
+
+@media (max-width: 1250px) {
+  .banner .banner_textArea {
+    max-width: 975px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner .banner_textArea {
+    max-width: 750px;
+  }
 }
 
 @media (max-width: 770px) {
   .banner .banner_textArea {
     width: 100%;
+    padding: 0;
   }
 }
 
 .banner .banner_textArea .banner_text1 {
   width: 60%;
-  margin-left: 5.5rem;
 }
 
 @media (max-width: 770px) {
