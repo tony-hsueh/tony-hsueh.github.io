@@ -1,0 +1,57 @@
+$primary-color : rgb(255, 255, 255);
+$medium: 1250px;
+$pad: 1000px;
+$mobile: 770px;
+@mixin  button($btnWidth) {
+    width: $btnWidth;
+    height: 45px;
+    font-family: $font-family ;
+    font-weight: weight(bold);
+    background-color: rgb(33, 139, 253);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(58, 152, 252);
+    }
+}
+
+@mixin medium {
+    @media (max-width: $medium) {
+        @content;
+    }
+}
+@mixin pad {
+    @media (max-width: $pad) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+$btn-bgcolor : rgb(33, 139, 253);
+$btn-hover: rgb(58, 152, 252);
+$btn-color: white;
+$btn-angle: 5px;
+$btn-height: 40px;
+$btn-horizon: center;
+$btn-vertical: 30px;
+$btn-padding: 5px 5px;
+
+$font-family: sans-serif;
+$font-size: 1rem;
+$font-weight: (
+    'none': 100,
+    'regular': 400 ,
+    'medium': 500 ,
+    'bold': 700
+);
+$nav-padding : 10px 80px;
+
+$icon-color : rgb(143, 143, 143);
+$icon-size : 1.1rem;
