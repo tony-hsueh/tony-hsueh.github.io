@@ -1,18 +1,79 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .navbar{
+    background: linear-gradient(to Right, rgb(247, 170, 27),rgb(248, 63, 248));
+    color: white;
     width: 100%;
-    height: 50px;
+    height: 80px;
     font-family: sans-serif;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    padding-left: 60px;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 60px;
 }
 .navbar li{
+    position: relative;
+    margin-right: 5rem;
     list-style: none;
     cursor: pointer;
+}
+.navbar li::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
     transition: .5s;
+}
+.navbar li:hover::after{
+    width: 100%;
+}
+.banner{
+    background: url(/img/piano.jpg);
+    padding-top: 90px;
+    padding-bottom: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.banner_text{
+    width: 45%;
+    padding-left: 45px;
+    margin-bottom: 5rem;
+}
+.banner_title{
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    margin-top: 3rem;
+}
+.banner_profile{
+    font-size: 1.25rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+    color: rgb(193, 190, 190);
+}
+.card_zone{
+    margin-top: 3rem;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.card_zone_title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 30%;
+    height: 200px;
+    background-color: beige;
+    border-radius: 6px;
 }
