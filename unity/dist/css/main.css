@@ -255,13 +255,13 @@
   background-image: url(../img/Unity_KeyArt21_04-blur.jpg);
   padding-top: 8.5rem;
   padding-bottom: 8rem;
+  background-size: cover;
 }
 
 @media (max-width: 770px) {
   .banner .banner_pic {
     padding-top: 0;
     padding-bottom: 3rem;
-    background-size: cover;
     background-position: 50% 0;
   }
 }
