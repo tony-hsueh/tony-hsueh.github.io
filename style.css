@@ -3,17 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .navbar{
     background: linear-gradient(to Right, rgb(247, 170, 27),rgb(248, 63, 248));
     color: white;
     width: 100%;
-    height: 80px;
+    height: 100px;
     font-family: sans-serif;
     font-size: 1.5rem;
     padding-left: 60px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 60px;
+    /* border-bottom-left-radius: 20px; */
 }
 .navbar li{
     position: relative;
@@ -24,11 +26,14 @@
 .navbar li::after{
     content: "";
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.785);
     width: 0%;
     height: 2px;
     left: 0;
     bottom: 0;
+    box-shadow: 0 0 5px 0 rgb(255, 232, 57),
+                0 0 8px rgb(255, 232, 57),
+                0 0 10px rgb(255, 232, 57);
     transition: .5s;
 }
 .navbar li:hover::after{
@@ -73,7 +78,70 @@
 }
 .card{
     width: 30%;
-    height: 200px;
-    background-color: beige;
-    border-radius: 6px;
+    height: 250px;
+    /* background-color: beige; */
+    border: 5px solid;
+    animation: border-loop 3s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%,-25%);
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    background-color: rgb(226, 255, 132);
+    
+}
+@keyframes border-loop {
+    0%{
+        border-image: linear-gradient(#ff512f,#1c64ff) 1;
+    }
+    50%{
+        border-image: linear-gradient(360deg,#ff512f,#1c64ff) 1;
+    }
+    100%{
+        border-image: linear-gradient(#ff512f,#1c64ff) 1;
+    }
+}
+footer{
+    margin-top: 5rem;
+    padding: 90px 30px;
+    background-color: black;
+}
+.recognize_zone {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.self_photo{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, red, blue);
+    /* background-color: gray; */
+    animation: swirl .5s linear infinite;
+    cursor: pointer;
+}
+@keyframes swirl {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.self_profile {
+    width: 50%;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+.self_profile>span{
+    color: red;
 }

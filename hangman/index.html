@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>HANGMAN</title>
+</head>
+<body>
+    <h1>HANGMAN</h1>
+    <div class="l-game-zone">
+        <div class="answer-zone">
+            <div id="button" class="guess-area"></div>
+            <div id="answers" class="answers"></div>
+        </div>
+        <canvas id="tutorial" width="300" height="500">
+            Game use canvas
+        </canvas>
+        <div class="hint">
+            <div class="close">x</div>
+        </div>
+    </div>
+    <div class="l-tool-btn">
+        <button class="get-hint">取得提示</button>
+        <button class="game-reset">重玩一次</button>
+    </div>
+    <div class="modal-mask"></div>
+    
+    <script src="./hangman.js"></script>
+</body>
+</html>
