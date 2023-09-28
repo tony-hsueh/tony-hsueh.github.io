@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <title>大家來找碴</title>
+</head>
+<body>
+  <h1 class="title"> 
+    <div class="first-word">s</div>pot Difference
+  </h1>
+  <div class="game-container">
+    <div class="overlay">
+      <button id="start-btn">Start</button>
+    </div>
+    <div class="top-wrapper">
+      <!-- 生命三個 ＋ 倒數計數 -->
+      <div class="timer">00 : <span id="timer">30</span></div>
+      <div class="life-container">
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+    </div>
+    <div class="game-zone">
+      <div class="left img-container">
+        <img src="./img/penguin.jpg" alt="原版圖">
+      </div>
+      <div class="right img-container">
+        <img src="./img/penguin-final.jpg" alt="修改圖">
+      </div>
+    </div>
+    <div class="toolbar">
+      <!-- 提示與顯示目前進度 -->
+      <div class="count"><span id="find-count">0</span>/5</div>
+      <div class="hint">
+        <i class="fa-solid fa-magnifying-glass"></i> 
+        <span>x</span>
+        <span id="hint-count">3</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./game.js"></script>
+</body>
+</html>
