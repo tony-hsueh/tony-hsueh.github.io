@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #4b4949;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.github-ribbon {
+  position: absolute;
+  right: -85px;
+  top: 92px;
+  padding: 8px 54px;
+  background-color: #83adf7;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  transform: rotate(45deg);
+}
+
+.grid-line-btn {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid #f55e5e;
+  border-radius: 6px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.grid-line-btn:hover {
+  background-color: #f55e5e;
+}
+
+.board {
+  box-shadow: 0 0 15px 0 #979797ba;
+  height: 500px;
+}
+
+.score-wrap {
+  font-size: 2rem;
+  color: white;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 769px) {
+  .github-ribbon {
+   display: none;
+  }
+
+  .board {
+    width: 300px;
+    height: 400px;
+  }
+
+  .toolbar {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1550px) {
+  .github-ribbon {
+    right: -85px;
+    top: 85px;
+  }
+}
+
+@media (min-width: 1550px) {
+  .github-ribbon {
+    right: -100px;
+  }
+}
