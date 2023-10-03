@@ -17,8 +17,14 @@ for(i = 0; i < 6; i++) {
   for (j = 0; j < 7; j++) {
     const td = document.createElement('td')
     // 當天會有不同的屬性
-    if(startDay === now.date() && j + 1 === firstDayInMonth) {
-      td.classList.add('event')
+    if(startDay === now.date()) {
+      if (now.date() === 1 ){
+        if (j + 1 === firstDayInMonth) {
+          td.classList.add('event')
+        }
+      } else {
+        td.classList.add('event')
+      }
     }
     if (i === 0  && j >= firstDayInMonth -1) {
       td.innerHTML = startDay
@@ -48,9 +54,14 @@ function renderCalendar(currentYear, currentMonth) {
         startDay === now.date() 
         && currentYear === now.year() 
         && currentMonth === now.month()
-        && j + 1 === firstDayInMonth
       ) {
-        td.classList.add('event')
+        if (now.date() === 1) {
+          if (j + 1 === firstDayInMonth) {
+            td.classList.add('event')
+          }
+        } else {
+          td.classList.add('event')
+        }
       }
       if (i === 0  && j >= firstDayInMonth -1) {
         td.innerHTML = startDay
