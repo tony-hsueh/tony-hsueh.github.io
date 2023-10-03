@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .rect {
+        .rect,
+        .izuna {
             width: 600px;
             height: 600px;
             border-radius: 50%;
@@ -14,6 +15,12 @@
             background-color: rgb(5, 5, 5);
             position: relative;
             animation: rotate 2s linear ;   
+        }
+
+        .izuna {
+            margin-top: 1rem;
+            border-width: 5px;
+            background-color: rgba(255, 18, 18, 0.986);
         }
         .rect1 {
             position: absolute;
@@ -97,6 +104,52 @@
             left:360px;
             top:240px;
         }
+        /* izuna eyes */
+        .inner {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background-color: rgba(255, 18, 18, 0.986);
+            box-shadow: 0 0 0 150px #000000 inset;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        .bar,
+        .bar1,
+        .bar2 {
+            width: 50%;
+            height: 100px;
+            background-color: #000000;
+        }
+
+        .bar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: left;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        .bar1 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform-origin: right;
+            transform: translateY(-50%) rotate(-30deg);
+        }
+
+        .bar2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: left;
+            transform: translateY(-50%) rotate(30deg);
+        }
+
         @keyframes rotate {
             from {
                 transform: rotate(0deg);
@@ -121,7 +174,13 @@
         <div class="rect2 middle3"></div>
         <div class="rect2 left3"></div>
         <div class="rect2 right3"></div>
+    </div>
 
+    <div class="izuna">
+        <div class="inner"></div>
+        <div class="bar"></div>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
     </div>
     
     
