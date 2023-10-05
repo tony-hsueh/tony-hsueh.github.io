@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .name {
+            text-align: center;
+        }
+
         .rect,
         .izuna {
             width: 600px;
@@ -13,12 +17,12 @@
             border-radius: 50%;
             border: 1px solid black;
             background-color: rgb(5, 5, 5);
+            margin: 1rem auto;
             position: relative;
             animation: rotate 2s linear ;   
         }
 
         .izuna {
-            margin-top: 1rem;
             border-width: 5px;
             background-color: rgba(255, 18, 18, 0.986);
         }
@@ -159,6 +163,91 @@
             }
             
         }
+
+        @media (max-width: 769px) {
+            .rect,
+            .izuna {
+                width: 300px;
+                height: 300px;
+            }
+
+            .rect1 {
+                width: 222px;
+                height: 222px;
+                border-radius: 222px 20px ;
+            }
+
+            .middle {
+                left: 40px;
+                top: 38px;
+            }
+
+            .middle1 {
+                left: 40px;
+                top: 38px;
+            }
+
+            .right {
+                top: 49px;
+                left: 44px;
+            }
+
+            .right1 {
+                top: 49px;
+                left: 44px;
+            }
+
+            .left {
+                top: 45px;
+                left: 33px;
+            }
+
+            .left1 {
+                top: 45px;
+                left: 33px;
+            }
+
+            .center {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: 133px;
+                top: 138px;
+            }
+
+            .rect2 {
+                width: 50px;
+                height: 133px;
+                left: 126px;
+                top: 22px;
+            }
+
+            .left3 {
+                transform: rotate(-120deg);
+                left: 79px;
+                top: 119px;
+            }
+
+            .right3 {
+                transform: rotate(120deg);
+                left: 177px;
+                top: 119px;
+            }
+
+            .inner {
+                width: 180px;
+                height: 180px;
+                box-shadow: 0 0 0 75px #000000 inset;
+            }
+
+            .bar,
+            .bar1,
+            .bar2 {
+                width: 50%;
+                height: 60px;
+                background-color: #000000;
+            }
+        }
     </style>
 </head>
 <body>
@@ -175,6 +264,7 @@
         <div class="rect2 left3"></div>
         <div class="rect2 right3"></div>
     </div>
+    <h2 class="name">Sasuke</h2>
 
     <div class="izuna">
         <div class="inner"></div>
@@ -182,8 +272,7 @@
         <div class="bar1"></div>
         <div class="bar2"></div>
     </div>
+    <h2 class="name">izuna</h2>
     
-    
-
 </body>
 </html>
