@@ -1,0 +1,235 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(32, 32, 32);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  perspective-origin: 50% 0%;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  width: 100%;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  text-align: center;
+  color: #77d3b1;
+  text-shadow: 0 0 10px #028551,
+  0 0 20px #028551,
+  0 0 23px #028551,
+  0 0 24px #006b41,
+  0 0 25px #006b41;
+  opacity: 0;
+  animation: opacity 1s ease-out 2s forwards;
+}
+
+.circle {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  animation: rotatex .5s linear 1s forwards;
+}
+
+.circle1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: 6px solid #33bb89;
+  box-shadow:  0 0 20px 0 #006b41, 
+      0 0 22px 0 #006b41,
+      0 0 20px 0 #006b41 inset,
+      0 0 22px 0 #006b41 inset,
+      0 0 24px 0 #006b41 inset,
+      0 0 26px 0 #006b41 inset;
+  opacity: 0;
+  animation: opacity 1s ease-out 2s forwards;
+}
+
+.circle2 {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 6px solid #33bb89;
+  box-shadow:  0 0 18px 0 #006b41,
+      0 0 20px 0 #006b41,
+      0 0 18px 0 #006b41 inset,
+      0 0 20px 0 #006b41 inset,
+      0 0 22px 0 #006b41 inset;
+  transform: translate(-50%, -50%) rotate(225deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  animation: opacity 1s ease-out 2s forwards;
+}
+
+.circle3 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 6px solid #33bb89;
+  box-shadow:  0 0 18px 0 #006b41,
+  0 0 20px 0 #006b41;
+  background: linear-gradient(to bottom, rgb(230, 230, 230) 50%, rgb(56, 55, 55) 50%);
+  transform: translate(-50%, -50%) rotate(0);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: taichi-rotate 2s linear forwards;
+}
+
+.circle4 {
+  position: absolute;
+  width: 144px;
+  height: 146px;
+  border-radius: 50%;
+  background-color: rgb(230, 230, 230);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.circle4::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-color: rgb(56, 55, 55);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle5 {
+  position: absolute;
+  width: 144px;
+  height: 146px;
+  border-radius: 50%;
+  background-color: rgb(56, 55, 55);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%); 
+}
+
+.circle5::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-color: rgb(230, 230, 230);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gua {
+  position: absolute;
+  color: #77d3b1;
+  text-shadow: 0 0 10px #028551,
+  0 0 20px #028551,
+  0 0 23px #028551,
+  0 0 24px #006b41,
+  0 0 25px #006b41;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  width: 53px;
+  height: 53px;
+  text-align: center;     
+}
+
+@keyframes taichi-rotate {
+  0% {
+      transform: translate(-50%, -50%) rotate(0) scale(3);
+  }
+  40% {
+      transform: translate(-50%, -50%) rotate(-150deg) scale(1);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(-290deg) scale(1);
+  }
+}
+
+@keyframes rotatex {
+  from {
+      transform: rotatex(0);
+  }
+  to {
+      transform: rotatex(96deg);
+  }
+}
+
+@keyframes camera {
+  from {
+      perspective: 260px;
+      perspective-origin: 50% 30%;
+  }
+  to {
+      perspective: 800px;
+      perspective-origin: 50% 0%;
+  }
+}
+
+@keyframes opacity {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@media (max-width: 769px) {
+  body {
+    perspective-origin: 50% -16%;
+  }
+
+  .circle,
+  .circle1 {
+    width: 230px;
+    height: 230px;
+  }
+
+  .circle2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle3 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle4,
+  .circle5 {
+    width: 54px;
+    height: 56px;
+  }
+
+  .circle4::before,
+  .circle5::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .gua {
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+  }
+}

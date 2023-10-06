@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>八卦64掌</title>
+</head>
+<body>
+    <h1 class="title">八卦六十四掌</h1>
+    <div class="circle">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3">
+            <div class="circle4"></div>
+            <div class="circle5"></div>
+        </div>
+    </div>
+    <script>
+        const circle2 = document.querySelector('.circle2')
+        
+        const eightGua = ['&#9776;', '&#9777;', '&#9778;', '&#9779;', '&#9780;', '&#9781;', '&#9782;', '&#9783;']
+        const eightGuaChinese = ['乾', '兌', '離', '震', '巽', '坎', '艮', '坤']
+
+        const radius = window.innerWidth > 768 ? 250 : 90
+        const guaRadius = window.innerWidth > 768 ? 200 : 76
+        const chineseRadius = window.innerWidth > 768 ? 290 : 100
+        const wordHeight = window.innerWidth > 768 ? 53 : 30
+
+        eightGua.forEach((gua, index) => {
+            const div = document.createElement('div')
+            div.innerHTML = gua
+            div.className = 'gua';
+            div.style.transform = `rotate(${index * 45 + 270}deg)`;
+            div.style.top = `${guaRadius * Math.sin(index * 45 * Math.PI / 180) + radius - wordHeight/2}px`;
+            div.style.left = `${guaRadius * Math.cos(index * 45 * Math.PI / 180) + radius - wordHeight/2 }px`;
+            circle2.append(div)
+        })
+
+        eightGuaChinese.forEach((chineseText, index) => {
+            const div = document.createElement('div')
+            div.innerHTML = chineseText
+            div.className = 'gua';
+            div.style.transform = `rotate(${index * 45 + 270}deg)`;
+            div.style.top = `${chineseRadius * Math.sin(index * 45 * Math.PI / 180) + radius - wordHeight/2}px`;
+            div.style.left = `${chineseRadius * Math.cos(index * 45 * Math.PI / 180) + radius - wordHeight/2}px`;
+            circle2.append(div)
+        })
+    </script>
+</body>
+</html>
